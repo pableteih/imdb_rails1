@@ -1,0 +1,13 @@
+<h1> Lista de series</h1>
+
+<% @serie.each do|x| %>
+  <h3>Nombre </h3>
+  <p> <%= x.name %> </p>
+  <h3>Sinopsis </h3>
+  <p> <%= x.synopsis %> </p>
+  <h3>Director </h3>
+  <p> <%= x.director %> </p>
+
+  <p>-----------------------------------</p>
+    
+<%end%>
