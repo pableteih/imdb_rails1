@@ -5,7 +5,7 @@ class SeriesController < ApplicationController
 
   def create
     @serie= Serie.new(serie_params)
-    pp @serie
+    
     if @serie.save
       redirect_to series_index_path
     else

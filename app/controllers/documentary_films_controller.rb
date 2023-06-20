@@ -5,7 +5,7 @@ class DocumentaryFilmsController < ApplicationController
 
   def create
     @documentaryfilm= Documentaryfilm.new(documentaryfilm_params)
-    pp @documentaryfilm
+   
     if @documentaryfilm.save
       redirect_to documentary_films_index_path
     else

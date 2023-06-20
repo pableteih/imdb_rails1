@@ -1,13 +1,40 @@
-<h1> Lista de series</h1>
+<!-- Wrapper -->
+			<div id="wrapper">
 
-<% @serie.each do|x| %>
-  <h3>Nombre </h3>
-  <p> <%= x.name %> </p>
-  <h3>Sinopsis </h3>
-  <p> <%= x.synopsis %> </p>
-  <h3>Director </h3>
-  <p> <%= x.director %> </p>
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Lista de series</h1>
+							<span class="image fit"> <%= image_tag 'series1.jpg', alt: '' %> </span>
 
-  <p>-----------------------------------</p>
-    
-<%end%>
+              <h3>Top 10 series de Faker GEM</h3> <br />
+            <% n=1 %>
+            <%= @serie.each_with_index do|x| %>
+              
+              <div class="table-container">
+                <table class="table movie-table">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Sinopsis</th>
+                      <th scope="col">Director</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row"><%= "#{n}" %></th>
+                      <td><%= x.name %></td>
+                      <td><%= x.synopsis %></td>
+                      <td><%= x.director %></td>
+                    </tr>
+                  </tbody>
+                </table>           
+                </div>   
+              <% n+=1 %>
+                    
+            <%end%>
+              
+					</section>
+
+			</div>
